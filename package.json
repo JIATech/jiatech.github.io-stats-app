@@ -2,7 +2,7 @@
     "name": "stats-app.github.io",
     "private": true,
     "version": "0.0.1",
-    "homepage": "https://jiatech.github.io/stats-app",
+    "homepage": "https://jiatech.github.io/stats-app.github.io/",
     "type": "module",
     "scripts": {
         "dev": "vite",
