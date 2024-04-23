@@ -15,9 +15,9 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({ children }) => {
 
     // Array of video sources
     const videoSources = [
-        "../../assets/video1.mp4",
-        "../../assets/video2.mp4",
-        "../../assets/video3.mp4",
+        '../../assets/video1.mp4',
+        '../../assets/video2.mp4',
+        '../../assets/video3.mp4',
     ];
 
     // Get a random video source

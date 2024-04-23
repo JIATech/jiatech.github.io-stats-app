@@ -1,8 +1,8 @@
 {
-    "name": "stats-app.github.io",
+    "name": "stats-app",
     "private": true,
     "version": "0.0.1",
-    "homepage": "https://jiatech.github.io/stats-app.github.io",
+    "homepage": "https://jiatech.github.io/stats-app",
     "type": "module",
     "scripts": {
         "dev": "vite",
