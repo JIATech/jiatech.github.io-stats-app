@@ -4,7 +4,6 @@ import { Box, useColorMode, Image } from '@chakra-ui/react';
 // import { SelfWritingText } from './selfWritingText';
 import ToggleDarkMode from '../Toggle.tsx';
 import LanguageSelector from './langComponent.tsx';
-import Contador from './contador.tsx';
 
 
 const Header: React.FC = () => {
@@ -16,7 +15,6 @@ const Header: React.FC = () => {
     return (
         <>
             <LanguageSelector />
-            <Contador />
             <Box
                 as="header"
                 p={4}

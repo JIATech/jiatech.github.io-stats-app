@@ -15,14 +15,21 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({ children }) => {
 
     // Array of video sources
     const videoSources = [
-        '../../assets/video1.mp4',
-        '../../assets/video2.mp4',
-        '../../assets/video3.mp4',
+        '/../../assets/video1.mp4',
+        '/../../assets/video2.mp4',
+        '/../../assets/video3.mp4',
     ];
 
-    // Get a random video source
-    const randomVideoSource =
-        videoSources[Math.floor(Math.random() * videoSources.length)];
+    // Random video source
+    function shuffle(array: string[]) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    const randomVideoSource = shuffle(videoSources)[0];
 
     const [isVideoForeground, setIsVideoForeground] = React.useState(false); // [1]
 
@@ -44,7 +51,6 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({ children }) => {
         const nextVideoIndex = (currentVideoIndex + 1) % videoSources.length;
         setVideoSource(videoSources[nextVideoIndex]);
         setIsLoading(true);
-        setIsVideoForeground(!isVideoForeground);
         if (videoRef.current) {
             (videoRef.current as HTMLVideoElement).load();
         }
